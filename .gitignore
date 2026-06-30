@@ -1,0 +1,15 @@
+# Output directories
+betaout/
+betaout_py/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Site timetables — data files, not code
+timetables_csv/
+timetables_mat/
+
+# Generated indices
+train_jpg_index.csv

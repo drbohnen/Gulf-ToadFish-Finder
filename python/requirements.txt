@@ -1,0 +1,13 @@
+# PyTorch and torchvision should be installed via conda/mamba for CUDA support:
+#   mamba install pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia
+#
+# Remaining dependencies:
+numpy
+scipy
+pandas
+soundfile
+pillow
+tqdm
+scikit-learn
+matplotlib
+h5py
