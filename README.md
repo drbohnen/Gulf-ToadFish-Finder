@@ -112,3 +112,19 @@ After training, the decision threshold is selected from the test-set sweep. Both
 | `F1 plateau` | Midpoint of the threshold range within 0.1% of peak F1 **(default)** |
 | `max F1` | Threshold that maximises F1 on the test set |
 | `min cost` | Threshold that minimises weighted FP/FN cost (FP weight = 1.075) |
+
+
+## Current Thresholds and Model Perforance 
+
+Both the matlab and python folders contain a subfolder model_performance, which include performance plots ROC, Confusion Matrix (for test hold out) etc. 
+
+Training stopped at epoch 26. Best val loss: 0.1009
+
+Test confusion matrix (row-normalised):
+[[0.94444444 0.05555556]
+ [0.04147157 0.95852843]]
+Precision: 0.952  Recall: 0.944  F1: 0.948
+AUC: 0.9902
+Threshold 0.54 (min cost)   : F1=0.956
+Threshold 0.53 (max F1)     : F1=0.957
+Threshold 0.55 (selected: F1 plateau)
