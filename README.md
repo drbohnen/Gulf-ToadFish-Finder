@@ -37,8 +37,7 @@ GTF_ResNet50tuned/
 
 ## Model weights
 
-Pre-trained classifier weights (`gtfclassifier_tuned.mat` / `gtfclassifier_tuned_py.pt`) are not included in this repository due to file size. They are available from [Zenodo — link TBD].
-
+Pre-trained classifier weights (`gtfclassifier_tuned.mat` / `gtfclassifier_tuned_py.pt`) are included in the repository. 
 ---
 
 ## MATLAB usage
@@ -47,9 +46,9 @@ Requires MATLAB with the **Deep Learning Toolbox** and **Signal Processing Toolb
 
 Set MATLAB's working directory to `matlab/` before running any script.
 
-**Fine-tune the classifier:**
+**Retrain the ResNet50 classifier in MATLAB:**
 ```matlab
-% Edit datasetDir and thr_method at the top of the script, then run:
+% You can edit datasetDir and thr_method at the top of the script, then run:
 gtfDeepToadFinetuneScript
 ```
 
@@ -76,7 +75,7 @@ pip install -r python/requirements.txt
 
 All scripts are run from the `python/` directory.
 
-**Fine-tune the classifier:**
+**Retrain the ResNet50 classifier in python classifier:**
 ```bash
 cd python
 python gtfDeepToadFinetuneScript.py
@@ -99,11 +98,11 @@ Training images and inference spectrograms must use the same pipeline. Both impl
 - Encode spectrograms as quality-95 JPEG before classifier input
 - Use 224×224 px output with robust contrast scaling
 
-The `parula256.csv` file ensures colormap consistency across platforms.
+The `parula256.csv` file ensures colormap consistency across platforms. But there are minor difference in the way MATLAB and Python do spectrograms and filtering. 
 
 ---
 
-## Threshold selection
+## Notes on Threshold selection
 
 After training, the decision threshold is selected from the test-set sweep. Both scripts support three methods (set `thr_method` / `THR_METHOD` in the config block):
 
