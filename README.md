@@ -38,6 +38,7 @@ GTF_ResNet50tuned/
 ## Model weights
 
 Pre-trained classifier weights (`gtfclassifier_tuned.mat` / `gtfclassifier_tuned_py.pt`) are included in the repository. 
+
 ---
 
 ## MATLAB usage
