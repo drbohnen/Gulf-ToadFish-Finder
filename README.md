@@ -27,10 +27,10 @@ GTF_ResNet50tuned/
 │   ├── gtfParseTrainJpg.py            # utility: generate training JPEG images
 │   ├── parula256.csv                  # exact MATLAB parula(256) colormap export
 │   └── requirements.txt
-├── timetables_csv/                    # site master index tables (CSV) — not distributed
-├── timetables_mat/                    # site master index tables (MAT) — not distributed
-├── betaout/                           # MATLAB detection output — not distributed
-└── betaout_py/                        # Python detection output — not distributed
+├── timetables_csv/                    # site master index tables (CSV) — distributed on dropbox (contact drbohnen @ ncsu.edu) 
+├── timetables_mat/                    # site master index tables (MAT) — distributed on dropbox
+├── train_jpg/                         # MATLAB training images - distributed on dropbox 
+└── train_jpg_py/                      # Python training images - distributed on dropbox 
 ```
 
 ---
@@ -118,8 +118,8 @@ After training, the decision threshold is selected from the test-set sweep. Both
 
 Both the matlab and python folders contain a subfolder model_performance, which include performance plots ROC, Confusion Matrix (for test hold out) etc. 
 
-Training stopped at epoch 26. Best val loss: 0.1009
 
+**Python:**
 Test confusion matrix (row-normalised):
 [[0.94444444 0.05555556]
  [0.04147157 0.95852843]]
